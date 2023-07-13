@@ -61,6 +61,3 @@ fs.readdir(directoryPath, function (err, paths) {
   })
 });
 
-
-
-
