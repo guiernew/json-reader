@@ -43,7 +43,7 @@ fs.readdir(directoryPath, function (err, paths) {
 
       const size = filtereItems.length;
 
-      [filtereItems[0]].forEach((item, index) => {
+      filtereItems.forEach((item, index) => {
         console.log('Sucesso: ' + index + '/' + size);
         axios.post(url, item, { headers: autenticacao })
           .then(res => {
