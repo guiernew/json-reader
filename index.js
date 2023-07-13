@@ -7,7 +7,8 @@ const filesDirectory = './files'
 const autenticacao = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
-  'Authorization': 'CHAVE_DO_CLIENTE'
+  'Authorization': 'CHAVE_DO_CLIENTE',
+  'APIKey': 'imseeyouractions'
 }
 
 const url = 'https://sandbox.api.customerx.com.br/api/v1/timelines'
