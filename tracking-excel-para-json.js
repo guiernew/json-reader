@@ -22,14 +22,14 @@ fs.readdir(directoryPath, function (err, paths) {
 
   paths.forEach(path => {
     try {
-      
+
       const erros = []
       console.log('Abrindo arquivo: ' + path);
       const result = excelToJson({
         sourceFile: (filesDirectory + '/' + path),
-        header:{
+        header: {
           rows: 1
-      },
+        },
         columnToKey: {
           A: 'external_id_client',
           B: 'date_tracking',
@@ -37,25 +37,25 @@ fs.readdir(directoryPath, function (err, paths) {
           D: 'identifier',
           E: 'type_tracking',
           F: 'email'
-      }
-    });
+        }
+      });
 
       const items = result.in;
       console.log('Quantidade: ' + items.length);
-      return;
+      // return;
       const filtereItems = items
       //.filter(nota =>
-       // nota.type.caption.includes('Tarefa') ||
-       // nota.type.caption.includes('Reunião')
+      // nota.type.caption.includes('Tarefa') ||
+      // nota.type.caption.includes('Reunião')
       //)
-       // .map(nota => ({
-       //   external_id_client: nota.customer.id_legacy,
-        ///  title: "anotação do sense",
-         // body: nota.description,
-         // created_at: nota.created_on,
-         // operation: "client_note",
-         // user_id: 4826
-        //}))
+      // .map(nota => ({
+      //   external_id_client: nota.customer.id_legacy,
+      ///  title: "anotação do sense",
+      // body: nota.description,
+      // created_at: nota.created_on,
+      // operation: "client_note",
+      // user_id: 4826
+      //}))
 
 
       console.log('Quantidade filtrada: ' + filtereItems.length);
@@ -66,11 +66,11 @@ fs.readdir(directoryPath, function (err, paths) {
         //if (![29,32,40,37,46,55,57,69,73,83,82,84,95,111,114,115,117,64,68,100,103,108,110].includes(index)){return}
         axios.post(url, item, { headers: autenticacao })
           .then(res => {
-            console.log('Sucesso: ' + (index+1) +  '/' + size);
+            console.log('Sucesso: ' + (index + 1) + '/' + size);
           })
           .catch(err => {
-           
-            console.error('Error no item posição: ' + index, err.data);
+
+            console.error('Erro no item posição: ' + index, err.data);
           });
       })
 
