@@ -28,10 +28,9 @@ fs.readdir(directoryPath, function (err, paths) {
 
     fs.writeFile(fullpath, fullText, 'utf8', function (err) {
       if (err) {
-        console.log('Erro em: ', path);
+        console.log('Erro gay viado!', path);
       }
-      console.log('Sucesso em: ', path);
+      console.log('Sucesso gay viado!', path);
     });
   })
-});
-
+}); 
