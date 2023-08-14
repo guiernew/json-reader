@@ -8,8 +8,8 @@ const filesDirectory = './files'
 const autenticacao = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
-  'credential': 'ba98764aff7c636eb5918f90dfbf5509',
-  'key': 'ecd4786a1d7c256a7379db72f116ac2b'
+  'credential': 'XXX',
+  'key': 'XXX'
 }
 
 const url = 'https://tracker.customerx.com.br'

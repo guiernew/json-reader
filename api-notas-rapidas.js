@@ -7,7 +7,7 @@ const filesDirectory = './files'
 const autenticacao = {
   'Content-Type': 'application/json',
   'Accept': 'application/json',
-  'Authorization': '9c6aa63a2e0e84bfa830d009208b9589',
+  'Authorization': 'XXX',
   'APIKey': 'imseeyouractions'
 }
 
